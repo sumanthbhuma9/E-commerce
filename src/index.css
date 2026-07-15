@@ -1,0 +1,28 @@
+@import "tailwindcss";
+@source "../index.html";
+@source "../src";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  --color-background: #f8fafc;
+  --color-card: #ffffff;
+  --color-primary: #3b82f6;
+  --color-secondary: #10b981;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-background);
+    color: var(--color-slate-900);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 300ms;
+  }
+  .dark body {
+    background-color: var(--color-slate-900);
+    color: var(--color-slate-50);
+  }
+}
