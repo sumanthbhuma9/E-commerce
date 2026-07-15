@@ -12,7 +12,7 @@ import { WishlistProvider } from './context/WishlistContext';
 
 function App() {
   return (
-    <Router>
+    <Router basename="/E-commerce">
       <ToastProvider>
         <WishlistProvider>
           <div className="min-h-screen flex flex-col">
